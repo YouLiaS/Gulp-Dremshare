@@ -1,0 +1,142 @@
+// ============ HEADER ============//
+.header {
+  width: 100%;
+  min-height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include for-tablet-portrait {
+    min-height: 580px;
+  }
+
+  @include for-phone-only {
+    min-height: 540px;
+  }
+
+  &__nav {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include for-tablet-portrait {
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    padding-top: 147px;
+    max-width: 470px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include for-phone-only {
+      padding-top: 125px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 52px;
+    line-height: 63px;
+    margin-bottom: 28px;
+
+    @include for-tablet-portrait {
+      font-size: 40px;
+      line-height: 52px;
+      margin-bottom: 18px;
+    }
+
+    @include for-phone-only {
+      font-size: 30px;
+      line-height: 37px;
+      margin-bottom: 6px;
+      max-width: 272px;
+    }
+  }
+
+  &__descr {
+    color: #F7F3F2;
+    font-size: 24px;
+    line-height: 24px;
+    @extend %roboto-300;
+    margin-bottom: 35px;
+    max-width: 396px;
+
+    @include for-tablet-portrait {
+      font-size: 20px;
+      line-height: 20px;
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    @include for-phone-only {
+      max-width: 280px;
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 17px;
+    color: $white;
+    background-color: $accent;
+    padding: 12px 19px;
+    border-radius: 40px;
+    transition: color .4s ease-out, background-color .4s ease-out;
+
+    &:hover {
+      color: $accent;
+      background-color: $white;
+    }
+  }
+
+  .logo {
+    @include for-tablet-portrait {
+      position: absolute;
+      top: 150px;
+    }
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  max-width: 195px;
+  width: 100%;
+
+  &__link {
+    color: $white;
+    @extend %montserrat-400;
+    font-size: 14px;
+    line-height: 17px;
+    transition: color .4s ease-out, border .4s ease-out;
+
+    &:not(:last-child) {
+      margin-right: 19px;
+    }
+
+    &:hover {
+      color: $accent;
+    }
+
+    &--sign {
+      border: 2px solid $white;
+      border-radius: 40px;
+      padding: 10px 17px 6px 18px;
+
+      &:hover {
+        border-color: $accent;
+      }
+    }
+  }
+}

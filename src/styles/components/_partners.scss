@@ -1,0 +1,148 @@
+// ============ PARTNERS ============//
+.partners {
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+
+    @include for-desktop {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include for-tablet-portrait {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__item {
+    max-width: 220px;
+    width: 100%;
+    min-height: 225px;
+    text-align: center;
+
+    @include for-desktop {
+      max-width: 50%;
+    }
+
+    @include for-tablet-portrait {
+      max-width: 100%;
+    }
+  }
+
+  &__profile {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      bottom: -5px;
+      right: -5px;
+      border-radius: 50%;
+      z-index: 5;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      bottom: 0;
+      right: 0;
+      z-index: 6;
+    }
+
+    &--bradley {
+      &::after {
+        background-image: url('../images/icons/music.svg');
+      }
+    }
+
+    &--marie {
+      &::after {
+        background-image: url('../images/icons/pen.svg');
+      }
+    }
+
+    &--diana {
+      &::after {
+        background-image: url('../images/icons/camera.svg');
+      }
+    }
+
+    &--christopher {
+      &::after {
+        background-image: url('../images/icons/plane.svg');
+      }
+    }
+  }
+
+  &__image {
+    max-width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__name {
+    padding-top: 17px;
+    font-size: 14px;
+    line-height: 17px;
+    @extend %montserrat-700;
+    margin-bottom: 21px;
+
+    @include for-tablet-landscape {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__descr {
+    font-size: 14px;
+    line-height: 14px;
+    color: $grey;
+    @extend %roboto-300;
+
+    @include for-desktop {
+      max-width: 236px;
+      margin: 0 auto;
+    }
+  }
+
+  &__link {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    color: $accent;
+    border: 2px solid $accent;
+    display: block;
+    border-radius: 40px;
+    padding: 12px 19px 12px 24px;
+    max-width: 185px;
+    width: 100%;
+    transition: color .4s ease-out,
+      background-color .4s ease-out;
+
+    &:hover {
+      color: $white;
+      background-color: $accent;
+    }
+  }
+}

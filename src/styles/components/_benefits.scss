@@ -1,0 +1,101 @@
+// ============ BENEFITS ============//
+.benefits {
+  padding: 90px 0;
+
+  @include for-tablet-portrait {
+    padding: 50px 0;
+  }
+
+  @include for-phone-only {
+    padding: 35px 0;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    align-items: center;
+
+    @include for-tablet-landscape {
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 20px
+    }
+  }
+
+  &__item {
+    max-width: 300px;
+    width: 100%;
+    min-height: 400px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    @include for-desktop {
+      max-width: 45%;
+    }
+
+    @include for-tablet-landscape {
+      min-height: 360px;
+      max-width: 48%;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    @include for-tablet-portrait {
+      max-width: 100%;
+      min-height: 295px;
+    }
+
+    @include for-phone-only {
+      min-height: 250px;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 21px 25px;
+    color: $white;
+    width: 100%;
+  }
+
+  &__step {
+    @extend %montserrat-400;
+    text-transform: uppercase;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 2px;
+    padding: 5px 14px 3px 12px;
+    background-color: $accent;
+    border-radius: 40px;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+
+  &__heading {
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 22px;
+    max-width: 250px;
+
+    @include for-tablet-landscape {
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    @extend %roboto-300;
+    max-width: 250px;
+    color: $small-text;
+    font-size: 14px;
+    line-height: 14px;
+  }
+}

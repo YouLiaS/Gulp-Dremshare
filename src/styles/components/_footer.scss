@@ -1,0 +1,103 @@
+// ============ FOOTER ============//
+.footer {
+  border-top: 2px solid $accent;
+
+  &__inner {
+    padding: 36px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 25%;
+
+    @include for-desktop {
+      grid-template-columns: repeat(3, 1fr) 20%;
+    }
+
+    @include for-tablet-landscape {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      row-gap: 20px;
+    }
+
+    @include for-tablet-portrait {
+      grid-template-columns: 1fr;
+    }
+
+    @include for-phone-only {
+      padding: 20px 0 22px;
+    }
+  }
+
+  .logo {
+    max-width: 119px;
+    min-height: 20px;
+  }
+
+  &__heading {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 11px;
+
+    @include for-tablet-portrait {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    max-width: 115px;
+    width: 100%;
+
+    @include for-tablet-portrait {
+      max-width: 280px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      @include for-tablet-portrait {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  &__link {
+    @extend %roboto-300;
+    line-height: 26px;
+    color: $light-grey;
+    transition: color .4s ease-out;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__holder {
+    &--areto {
+      justify-self: end;
+
+      @include for-tablet-landscape {
+        justify-self: center;
+      }
+    }
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 1px;
+    text-align: right;
+    color: #cccccc;
+
+    @include for-tablet-landscape {
+      text-align: center;
+    }
+  }
+
+  .areto {
+    max-width: 110px;
+    min-height: 24px;
+  }
+}

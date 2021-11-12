@@ -1,0 +1,109 @@
+extends common/layout
+
+block content 
+  main
+  section.benefits
+    .container
+      h2.title.benefits__title How Dreamshare works?
+      ul.benefits__items
+        li.benefits__item(style='background-image: url(../images/benefits/step-1.jpg);')
+          .benefits__info
+            span.benefits__step Step 1
+            h3.benefits__heading Sed leo enim, condimentum
+            p.benefits__text
+              | Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec
+              | rhoncus a leo sit amet facilisis.
+        li.benefits__item(style='background-image: url(../images/benefits/step-2.jpg);')
+          .benefits__info
+            span.benefits__step Step 2
+            h3.benefits__heading Morbi velit risus
+            p.benefits__text
+              | Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet
+              | porttitor est.
+        li.benefits__item(style='background-image: url(../images/benefits/step-3.jpg);')
+          .benefits__info
+            span.benefits__step Step 3
+            h3.benefits__heading Sed leo enim, condimentum
+            p.benefits__text
+              | Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec
+              | rhoncus a leo sit amet facilisis.
+  section.partners
+    .container
+      h2.partners__title.title Meet a partner for your best holiday
+      ul.partners__items
+        li.partners__item
+          .partners__profile.partners__profile--bradley
+            .partners__image
+              img.partners__img(src='./images/partners/brandley.jpg', alt='Bradley Hunter image')
+          p.partners__name Bradley Hunter
+          p.partners__descr Based in Chicago. I love playing tennis and loud music.
+        li.partners__item
+          .partners__profile.partners__profile--marie
+            .partners__image
+              img.partners__img(src='./images/partners/marie.jpg', alt='Marie Bennett image')
+          p.partners__name Marie Bennett
+          p.partners__descr Currently living in Colorado. Lover of art, languages and travelling.
+        li.partners__item
+          .partners__profile.partners__profile--diana
+            .partners__image
+              img.partners__img(src='./images/partners/diana.jpg', alt='Diana Wells image')
+          p.partners__name Diana Wells
+          p.partners__descr
+            | Living in Athens, Greece. I love black and white classics, chillout music and
+            | green tea.
+        li.partners__item
+          .partners__profile.partners__profile--christopher
+            .partners__image
+              img.partners__img(src='./images/partners/cristophor.jpg', alt='Christopher Pierce image')
+          p.partners__name Christopher Pierce
+          p.partners__descr Star Wars fanatic. I have a persistent enthusiasm to create new things.
+      a.partners__link(href='#') See other partners
+  section.holiday
+    .container
+      h2.holiday__title.title Discover holiday activity ideas
+      .gallery
+        ul.gallery__items
+          li.gallery__item
+            a.gallery__box(href='#')
+              .gallery__picture
+                img.gallery__pic(src='./images/gallery/pic-1.jpg', alt='Girl running')
+              a.gallery__link(href='#') Sports and Activis
+          li.gallery__item
+            a.gallery__box(href='#')
+              .gallery__picture
+                img.gallery__pic(src='./images/gallery/pic-2.jpg', alt='Girl picture')
+              a.gallery__link(href='#') Wellness and Health
+          li.gallery__item
+            a.gallery__box(href='#')
+              .gallery__picture
+                img.gallery__pic(src='./images/gallery/pic-3.jpg', alt='A man')
+              a.gallery__link(href='#')
+                | Extreme Sports
+                | and Expeditions
+          li.gallery__item
+            a.gallery__box(href='#')
+              .gallery__picture
+                img.gallery__pic(src='./images/gallery/pic-4.jpg', alt='Playing cards')
+              a.gallery__link(href='#') Games
+          li.gallery__item
+            a.gallery__box(href='#')
+              .gallery__picture.gallery__picture--wide
+                img.gallery__pic(src='./images/gallery/pic-5.jpg', alt='Coliseum')
+              a.gallery__link(href='#') Culture and Education
+          li.gallery__item
+            a.gallery__box(href='#')
+              .gallery__picture.gallery__picture--wide
+                img.gallery__pic(src='./images/gallery/pic-6.jpg', alt='Massage girl picture')
+              a.gallery__link(href='#') Enjomet and Relaxation
+          li.gallery__item
+            a.gallery__box(href='#')
+              .gallery__picture
+                img.gallery__pic(src='./images/gallery/pic-7.jpg', alt='Couple of people')
+              a.gallery__link(href='#') Trevelling
+      h4.holiday__heading.title Crate your holiday activity
+      form.search-form(action='#')
+        p.search-form__text Hi! What are your holiday interests?
+        .search-form__box
+          label.search-form__label(for='search')
+          input#search.search-form__input(type='search', placeholder='Enter your insterests')
+          button.search-form__btn(type='submit') Search partners
